@@ -6,18 +6,22 @@ cmake --build . && (
 	) 
 	echo START 
 	call %var%
-	echo.
-	if not exist "C:\Windows\nhcolor.exe" (:: https://nhutils.ru/blog/nhcolor/
-		IF %errorlevel% == 0 (
-			echo return code: %errorlevel%
-		) ELSE (
-			echo crash with code: %errorlevel%
-		)
-	) else (
-		IF %errorlevel% == 0 (
-			echo return code: %errorlevel% | nhcolor 0A
-		) ELSE (
-			echo crash with code: %errorlevel% | nhcolor 0C
-		)
+	goto:print_code
+)
+goto:eof
+
+:print_code
+echo.
+if not exist "C:\Windows\nhcolor.exe" (:: https://nhutils.ru/blog/nhcolor/
+	IF %errorlevel% == 0 (
+		echo return code: %errorlevel%
+	) ELSE (
+		echo crash with code: %errorlevel%
+	)
+) else (
+	IF %errorlevel% == 0 (
+		echo return code: %errorlevel% | nhcolor 0A
+	) ELSE (
+		echo crash with code: %errorlevel% | nhcolor 0C
 	)
 )
