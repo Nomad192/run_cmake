@@ -14,11 +14,11 @@ cmake --build . && (
 	) 
 	echo START 
 	call %var%
-	goto:print_code
+	goto:print_return_code
 )
 goto:eof
 
-:print_code
+:print_return_code
 echo.
 if not exist "C:\Windows\nhcolor.exe" (
 	IF %errorlevel% == 0 (
@@ -45,10 +45,11 @@ rem 		for %%j in ( %%i ) do set "var=%%j"
 rem 	) 
 rem 	echo START 
 rem 	call %var%
+rem 	goto:print_return_code
 rem )
 rem goto:eof
 rem
-rem :print_code
+rem :print_return_code
 rem echo.
 rem echo return code: %errorlevel%
 :: ---------------------------------------------------------------------------------------

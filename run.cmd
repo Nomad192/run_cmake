@@ -6,11 +6,11 @@ cmake --build . && (
 	) 
 	echo START 
 	call %var%
-	goto:print_code
+	goto:print_return_code
 )
 goto:eof
 
-:print_code
+:print_return_code
 echo.
 if not exist "C:\Windows\nhcolor.exe" (:: https://nhutils.ru/blog/nhcolor/
 	IF %errorlevel% == 0 (

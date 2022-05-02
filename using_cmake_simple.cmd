@@ -6,9 +6,10 @@ cmake --build . && (
 	) 
 	echo START 
 	call %var%
+	goto:print_return_code
 )
 goto:eof
 
-:print_code
+:print_return_code
 echo.
 echo return code: %errorlevel%
