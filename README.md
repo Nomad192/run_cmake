@@ -1,7 +1,6 @@
 # run_cmake
 
-Starting from the build folder
+## info
+> The branch is only for the current (latest - using_cmake_norm) version of the script
 
-Search for exe ... (name sc)
-
-run.cmd - latest version (using_cmake_norm)
+> Starting from the build folder
