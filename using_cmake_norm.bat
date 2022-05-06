@@ -10,15 +10,15 @@ echo or code
 
 cmake --build . && (
 	for /f "delims=" %%i in ('cmake --build .') do (
-		for %%j in ( %%i ) do set "var=%%j"
+		for %%j in ( %%i ) do set "target_name=%%j"
 	) 
-	echo START 
-	call %var%
-	goto:print_return_code
+	goto:run
 )
 goto:eof
 
-:print_return_code
+:run
+echo START
+call %target_name%
 echo.
 if not exist "C:\Windows\nhcolor.exe" (
 	IF %errorlevel% == 0 (
@@ -39,17 +39,18 @@ if not exist "C:\Windows\nhcolor.exe" (
 :: simple version
 :: ---------------------------------------------------------------------------------------
 rem @echo off
+rem
 rem cmake --build . && (
 rem 	for /f "delims=" %%i in ('cmake --build .') do (
 rem 		for %%j in ( %%i ) do set "var=%%j"
 rem 	) 
 rem 	echo START 
-rem 	call %var%
-rem 	goto:print_return_code
+rem 	goto:run
 rem )
 rem goto:eof
 rem
-rem :print_return_code
+rem :run
+rem call %var%
 rem echo.
 rem echo return code: %errorlevel%
 :: ---------------------------------------------------------------------------------------
