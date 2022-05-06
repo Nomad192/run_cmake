@@ -10,7 +10,9 @@ goto:eof
 
 :run
 echo START
+
 call %target_name%
+
 echo.
 if not exist "C:\Windows\nhcolor.exe" (:: https://nhutils.ru/blog/nhcolor/
 	IF %errorlevel% == 0 (
