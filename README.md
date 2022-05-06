@@ -1,6 +1,10 @@
 # run_cmake
 
 ## info
-> The branch is only for the current (latest - using_cmake_norm) version of the script
+> A script for conveniently launching the build and executable file of the program using cmake
 
 > Starting from the build folder
+
+> The branch for all versions of the script, if you only need the latest version, switch to the only_run branch
+
+> (latest version - using_cmake_norm)
