@@ -16,12 +16,12 @@ if not exist "C:\Windows\nhcolor.exe" (:: https://nhutils.ru/blog/nhcolor/
 	IF %errorlevel% == 0 (
 		echo return code: %errorlevel%
 	) ELSE (
-		echo crash with code: %errorlevel%
+		echo crash with code: 0x%=ExitCode%
 	)
 ) else (
 	IF %errorlevel% == 0 (
 		echo return code: %errorlevel% | nhcolor 0A
 	) ELSE (
-		echo crash with code: %errorlevel% | nhcolor 0C
+		echo crash with code: 0x%=ExitCode% | nhcolor 0C
 	)
 )
