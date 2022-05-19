@@ -5,6 +5,6 @@
 
 > Starting from the build folder
 
-> The branch for all versions of the script, if you only need the latest version, switch to the only_run branch
+> The branch for all versions of the script, if you only need the latest version, switch to the only_run branch or use run.bat
 
 > (latest version - using_cmake_norm)
